@@ -21,7 +21,7 @@ class MovieList extends Component {
     if(this.state.userInput === "") {
       alert("Please Enter a movie title.")
     } else {
-      fetch(`http://www.omdbapi.com/?apikey=8a46960c&s=${this.state.userInput}`)
+      fetch(`https://www.omdbapi.com/?apikey=8a46960c&s=${this.state.userInput}`)
       .then(response => response.json())
       .then(data => {
         data.Search.forEach((movie)=>{
